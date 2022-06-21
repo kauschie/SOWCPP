@@ -1,0 +1,141 @@
+Chapter 1
+
+Programmer / software developer – a person with the training and skills necessary to design, create, and test computer programs.
+
+HARDWARE:
+
+Central Processing Unit (CPU)
+-   Control Unit   &   Arithmetic and Logic Unit (ALU)
+-	Part of the computer that actually runs/executes the program
+-	Fetches instructions and produces some result
+    o	Fetch – fetches from main memory the next instruction
+    o	Decode – instruction is encoded as a number. The control unit decodes the instruction and generates an electrical signal
+    o	Execute – Signal is routed to the appropriate component of the computer (ALU, disk drive, some other device)
+
+Main Memory (Random Access Memory (RAM))
+    -	Where the computer stores a program while it is running as well as the data with which the program is working with
+    -	When the computer is turned off, the contents of RAM are erased
+    -	Divided into storage locations known as bytes. Each byte is divided into 8 bits.
+        o	Bit – Binary Digit, tiny switches that can be either on (+) or off (-) . 
+    -	Each byte has an associated memory address which are ordered from lowest to highest. 
+
+Secondary Storage
+    -	Holds data for long periods of time (even without power)
+    -	Programs usually stored in secondary and loaded into main memory as needed
+    -	E.g. disk drive, ssd, usb, sd, cd/dvd
+
+Input Devices
+    -	Any data that the computer collects from the outside world
+    -	The device that collects the information and sends it to the computer is called the input device
+    -	e.g. keyboard, mouse, etc
+
+Output Device
+    -	any information that the computer sends to the outside world
+    -	information is sent to the output device which formats it and presents it
+    -	e.g. screens, printers, speakers, etc
+
+
+SOFTWARE:
+
+*System Software – the programs the control and manage the basic operations of a computer
+
+    Operating Systems
+    -	controls the internal operations of a computer’s hardware
+    -	manages all devices connected to the computer
+    -	allows data to be saved and retrieved from storage devices
+    -	allows other programs to run on the computer
+
+    Utility Programs
+    -	enhances computer’s operation or safeguards data
+        o	e.g. virus scanners, file compression, data backup
+    
+    Software Development Tools
+    -	tools that programmers use to create, modify, and test software
+
+*Application Software – programs that make a computer useful for everyday tasks
+
+Programs and Programming Languages
+
+Algorithm – a set of well-defined steps for performing a task or solving a problem
+
+Machine Language – stream of binary numbers for form instructions which are interpreted by the CPU
+
+Programming Language – uses words instead of numbers which are then converted into machine language
+	Low Level Language – close to the level of a computer which means that it resembles the numeric machine language of the computer more than the natural language of humans
+	High Level Language – closer to the level of human readability than computer readability
+
+        C++ is popular because it has both low and high level features, but also because of its portability
+
+Portability – can be written on one type of computer then run on many other types of systems
+	(usually requires the program to be recompiled but the program itself may need little or no change)
+
+Source code – statements written by the computer programmer
+Source file – file that source code is saved in
+
+
+Preprocessor – program that searches the source code for lines that begin with # (which modify the source code in some way).
+
+Compiler – steps through preprocessed source code and translates each source code instruction into the appropriate machine language instruction. 
+    -	This process uncovers any syntax errors
+    -	If the file is free of syntax errors, compiler stores the translated machine language instructions in an object file
+        Syntax error -  illegal uses of key words, operators, punctuation or other language elements
+		    Object code – translated machine language instructions
+
+Linker – program that combines the object file with the necessary library routines the programmer may have used
+	
+    Runtime library – collection of pre-written code for common or sometimes difficult tasks
+
+Executable file – created by the linker program and contains executable code and is ready to run on the computer
+	Executable code  - contains all of the machine language instructions necessary to run the program
+
+What is a Program Made of?
+
+Language Elements 
+	Key Words (reserved words) – words that have special meaning 
+	Programmer-Defined Identifiers – words or names defined by the programmer
+	Operators – perform functions on one or more operands
+	Punctuation – characters that mark the beginning or end of a statement, or separate list items
+	Syntax – rules that must be followed when constructing a program such as how key words and operators may be used and where punctuation symbols must appear
+
+Line vs statement
+	Line – single line as it appears in the body of the written program
+	statement – a complete instruction that causes the computer to perform some action
+
+Variable – named storage location in the computer’s memory for holding a piece of information which may or may not change while the program is running
+
+Variable definition – statement used to define one or more variables that will be used in the program and to indicate the type of data they will hold. 
+    -	Causes the variables to be created in memory
+    -	Variable must be defined before they can be used
+
+Three Primary Activities of a Program:
+-	Input
+-	Processing
+-	Output
+
+
+The programming process:
+1.	Define what the program is to do
+2.	Visualize the program running on the computer
+3.	Use design tools such as pseudocode/flowcharts to model the program
+4.	Check the model for logical errors
+5.	Type the code, save it, compile it
+6.	Correct any errors found during compilation. Repeat 5/6 as necessary.
+7.	Run the program with test data for input
+8.	Correct any errors found while running the program. Repeat 5-8 as many times as necessary.
+9.	Validate the results of the program
+
+
+Design Tools
+	Hierarchy Chart
+		Starts with overall tasks and refines it into smaller subtasks
+		Each subtask is then refined into smaller sets of subtasks until its easily performed
+	Flowchart
+		Diagram that shows logical flow of the program and order in which operations occur
+	Pseudocode
+		Cross between human language and programming language
+
+Logical Errors – mistakes that cause the program to produce erroneous results
+
+Runtime errors – Error that occurs while the program is running. These are usually logical errors such as mathematical mistakes.
+
+Desk checking – programmer starts reading the program or a portion thereof and steps through each statement noting how variables are changing

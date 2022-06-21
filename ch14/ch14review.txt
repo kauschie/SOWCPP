@@ -1,0 +1,86 @@
+1) instance member var: each instantiated object gets its own variable
+    static member var: each instantiated object works with the same variable
+
+2)  Numbers::showTotal();
+
+3)  globally outside of the class
+
+4) a function that is external to the class but has access to the private member variables
+
+5) defeats encapsulation and the protections over the private member variables
+
+6) the value of each member variable from one object is directly copied verbatim 
+    to respective member variable of another class
+
+7) when an object is initialized to the values of another object or when an object
+    is passed by value to a function
+
+8) the sole parameter is a reference variable to an object of the same type
+
+9) when an object has pointer variables
+
+10) if it weren't a reference then the copy constructor would be called in an infinite loop
+    until all the available free memory is used up
+
+11) a copy constructor that is called that performs memberwise assignment
+
+12) to extend the functionality of the c++ operators to be used with their object so that 
+    statements like obj += 1 or if (obj1 < obj2) are possible
+
+13) the value on the right side of the = operator
+
+14) then you can't string assignment statements together like so: n1 = n2 = n3 = data;
+
+15) the postfix++ operator has a dummy int parameter: operator++(int)
+
+16) a pointer that points to the instance of the class
+
+17) boolean
+
+18) Stuff blob = clump;     // copy constructor
+    clump = blob;           // overloaded = operator
+    blob.operator=(clump);  // overloaded = operator
+    showValues(blob);    // copy constructor when blob is passed by value
+
+19) member variable is declared static within the class and needs to be defined outside of
+    the class 
+
+20) member function is declared static within the class and can only use static member variables
+    when called you need to use the scope resolution operator in the function call
+
+21) x: 3
+    y: 3
+    z: 1
+    0; global vars are initialized to 0
+    Thing::putThing(5);
+
+22) aggregate members of classes do not have access to private member data like friend functions
+    
+23) to declare to the compiler that something exists but it will be defined later
+
+24) because it will copy over the address of the pointer so the second object so that both objects
+    will be manipulating the data at the same address. If it was dynamically created then there 
+    will also be issues when one object is destroyed because one object will delete the reference 
+    to the object and the other object will still try to access it even though the memory has been
+    freed to the memory manager
+
+25) because a copy of the object is created when the parameter is created in memory when the 
+    function executes and is initialized with the argument object
+
+-----------------------------------------------------------------------------------------------
+                    fill in the blank section
+-----------------------------------------------------------------------------------------------
+
+26) static
+27) outside
+28) static
+29) before
+30) friend
+31) forward declaration
+32) memberwise assignment
+33) copy constructor
+34) this
+35) overloaded
+36) postfix++ or postfix--
+37) object aggregation
+38) "has-a"

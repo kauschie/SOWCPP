@@ -1,0 +1,5 @@
+app : program16-5.cpp rectangle.o
+	g++ -o app program16-5.cpp rectangle.o
+
+rectangle.o : rectangle.h rectangle.cpp
+	g++ -c rectangle.cpp

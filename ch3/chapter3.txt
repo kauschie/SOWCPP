@@ -1,0 +1,138 @@
+cout << "What is the length of the rectangle?\n";
+cin >> length;
+
+cin - standard input operator 
+            >>          stream extraction operator
+
+prompt - tells the user what data he or she should enter
+
+getting data is a two step process
+    (1)     use cout object to display a prompt on the screen
+    (2)     use cin object to read a value from the keyboard
+
+>> and << point in the direction that data is flowing
+
+cout <----- "What is the length of the rectangle?";
+cin -------> length;
+
+you must #include <iostream>    to use cin 
+
+Type Coercion - C++ will automatically convert operands to the same type
+
+data types ranked highest to lowest:
+long double
+double
+float
+unsigned long long int
+long long int
+unsigned long int
+long int
+unsigned int
+in
+
+rules for type coercion:
+    Rule (1): chars, shorts and unsigned shorts are automatically promoted to int
+        exception: unsigned short on some systems can be the same size and ints so
+            they would be promoted to an unsigned int
+        
+    Rule (2): When an operator works with two values of different data types, the lower-ranking
+        value is promoted to the type of the higher-ranking value.
+
+Beware of truncation with multiplication and Division
+    Multiplication
+        int x, y = 4
+        float z = 2.7
+        x = y * z
+        cout << x; results in x = 10 because the 10.8 is trancated for the assignment
+        *ensure x is a double to hold the double type assignment
+    Division
+        double parts;
+        parts = 15/6
+        cout << parts; results in parts = 2 because 15 and 6 are ints so the
+            results is 2.5 which gets truncated to an int so 2
+            the int 2 is then assigned to the double parts
+            *One of the operantds (15 or 6) needs to be made into a float (15.0 or 6.0)
+
+overflow and underflow
+    - When a variable is assigned a value that is too large or too small in 
+        ratnge for that variable's data type, the variable overflows or underflows
+
+Type casting
+    - allows for manual data type conversion
+
+    static_cast<DataType>(value)
+
+    double number = 2.7
+    int val;
+    val = static_cast<int>(number);
+
+combined assignment operators / compound operators / arithmetic assignement operators
+
+x += 1          |           x = x + 1
+x -= 2          |           x = x - 2
+y *= 3          |           y = y * 3
+z /= y          |           z = z / y
+c %= 3          |           c = c % 3
+
+
+
+**********************
+getline(cin, var);
+**********************
+
+        -- reads an entire line including leading whitespace and embedded spaces and 
+        stores them in a string object
+
+
+    eg
+        string name;
+        cout << "Enter your name: ";
+        getline(cin, name);
+        cout << "your name is " << name << endl;
+
+************************
+cin.get()
+************************
+    
+    cin has a builtin function get() which doesn't ignore white space
+
+            cin.get(ch)         // reads data into ch character var
+            ch = cin.get();
+
+            cin.get();          // waits for user input before continuing and doesn't
+                                // do anything with the data
+
+
+************************
+string member functions
+************************
+
+        string state = "Texas";
+        int size = state.length();   // .length() member function returns the length of the string
+
+    + operator concatenates strings
+
+    string greeting1 = "Hello ";
+    string greeting2;
+    string name1 = "World";
+    string name2 = "People";
+
+    greeting2 = greeting1 + name1;      // holds Hello World
+    greeting2 = greeting1 + name2;      // holds Hello People
+
+
+
+************************
+     Random Numbers   
+************************
+
+    requires <ctime> and <cstdlib>
+
+    rand() alone will not generate random numbers, you need to see it
+    call time(0) which generates an int that represents elapsed time from Jan 1, 1970.
+    see srand() with time like this:
+           srand(time(0))
+                or
+            seed = time(0);
+            srand(seed)
+    then you can call rand() and it will be pseudorandom

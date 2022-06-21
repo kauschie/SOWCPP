@@ -1,0 +1,114 @@
+Chapter 2
+
+Parts of a C++ program
+// 			Single line comment
+#			Pre-processor directive
+<>          Enclose a file name when used with #include Preprocessor directive
+<iostream> 		include file iostream, <> shorthand for standard C++ header file
+{}          encloses a group of Statements
+" "         Encloses a string of characters
+namespaces		organizes the names of program entities
+;           marks the end of a complete programming statement
+<<          stream insertion operator
+\n          newline escape sequence
+
+Preprocessor – reads your program before it is compiled and only executes those lines beginning with a # symbol. “sets up” your code for the compiler
+
+#include – include contents of another file known as a header file
+    -	Header b/c it should be included at the head or top of a program
+    -	Statements are inserted where the #include statement appears
+
+using namespace std
+    -	declares that the program will be accessing entities whose names are pare of the namespace “std”
+    -	every name created by <iostream> is part of the ‘std’ namespace
+
+int main()
+    marks the beginning of a function
+    the function returns an integer value
+    the starting point of every cpp program
+
+return 0;
+    returns a 0 (integer value) back to the operating system 
+
+cout
+    console output 
+    console comes from the old days of interacting with a terminal
+    terminal - simple screen + keyboard
+    stream object - works with streams of data
+    <<  stream insertion operator. item to the right is sent to cout then
+        displayed on the screen
+
+Integer Data Types              
+integers must be declared before they're used. memory is allocated for the variable
+at the time of declaration so you need to plan for your memory usage
+
+     data Types                         abbreviation
+
+short int                               short
+unsigned short int                      unsigned short
+unsigned int                            unsigned
+long int                                long
+unsigned long int                       unsigned long
+long long int                           long long
+unsigned long long int                  unsigned long long
+
+
+characters:
+
+printable characters are internally represented by numeric codes. Most computers
+    use ASCII codes for this purpose
+Characters normally occupy a single byte of memory
+strings are consecutive sequences of characters that occupy consecutive bytes of memory
+string literals are always stored in memory with a null terminator at the end which marks
+    the end of a string
+character literals are enclosed in single quotation marks
+string literals are enclosed in double quotation marks
+escape sequences such as '\n' are stored internally as a single character
+
+floating point data types:
+    - numerical values with decimal points
+    float < double < long double
+    assigning a float to an int causes the value to be truncated
+
+bool data type:
+    true or false
+
+sizeof(x) where x = variable or variable type
+    returns size of x in bytes
+    can be used in mathamatical operations
+
+Variable Assignments:
+    unitsSold = 12
+    '=' is an assignment operator
+    'unitsSold' and '12' are operands
+    other forms:
+        int value = 5;
+        int value(5);
+        int value {5}; // only works in c++ 11 and higher
+                        // this also checks that the value is the correct type
+                        // produces compile time errors if it doesn't
+
+    operand on the left side of the '=' symbol must be an lvalue
+    lvalue - something that identifies a place in memory whose contents may be changed
+    rvalue  - any expression that has a value
+    assignment statment takes value of expression on the right 
+        and puts it into the memory location on the left
+    
+    initialization - assigning values as part of the definition
+
+    'auto' keyword:
+        automatically defines a variables data type
+        auto interestRate = 12.0;
+        auto stockCode = 'D';
+
+Scope:
+    the part of the program that has access to the variable
+
+    variables must be defined before they can be used
+
+Integer Division
+    - dividing one int type by another int type results in an int 
+        regardless if the answer is an int or a float
+    - you must divide by a float in order to get a decimal answer because
+        the truncation occurs before the assignment
+
